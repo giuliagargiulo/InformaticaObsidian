@@ -1,7 +1,6 @@
 ---
 author: Giulia Gargiulo
 ---
-
 SQL dinamico consente di eseguire istruzioni SQL create dinamicamente nel corpo procedurale di PL/SQL.
 
 A differenza di ***SQL statico*** in cui il comando è scritto dal programmatore nella procedura e poi eseguito, in ***SQL dinamico*** il comando viene prodotto ed eseguito a **runtime**.

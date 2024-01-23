@@ -1,7 +1,6 @@
 ---
 author: Giulia Gargiulo
 ---
-
 Un ***data dictionary*** contiene la definizione di tutti gli oggetti che sono contenuti in un database, inclusi i valori di default, i vincoli di integrità, i trigger...
 
 Inoltre contiene le informazioni sullo spazio usato/ allocato per ogni schema di DB, il nome degli utenti, i ruoli e i privilegi assegnati.

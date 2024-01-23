@@ -1,14 +1,13 @@
 ---
 author: Giulia Gargiulo
 ---
-
-sono istruzioni che consentono di lavorare sui dati, cioè sul contenuto delle tabelle.
+Sono istruzioni che consentono di lavorare sui dati, cioè sul contenuto delle tabelle.
 
 `INSERT`: per inserire dati nelle tabelle (popolamento delle tabelle).
 `UPDATE`: per modificare il contenuto delle tabelle (singoli campi).
 `DELETE`: per eliminare righe intere da una tabella.
 
-#### Delete
+## Delete
 ```SQL
 DELETE 
 FROM <nomeTabella>
@@ -27,7 +26,7 @@ WHERE matrStud = 'N86001234' -- vengono elminiate tutte le righe con una specifi
 ```
 
 ---
-#### Insert
+## Insert
 La insert può avvenire in due modi diversi:
 1. Inserimento esplicito di valori.
 2. Inserimento di valori calcolati o estratti tramite subselect.
@@ -88,7 +87,7 @@ INSERT INTO <nomeTabella> [<elencoAttributi>]
 >```
 
 ---
-#### Update
+## Update
 
 ```SQL
 UPDATE <nomeTabella>

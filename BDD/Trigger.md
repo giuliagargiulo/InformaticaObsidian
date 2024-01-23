@@ -1,7 +1,6 @@
 ---
 author: Giulia Gargiulo
 ---
-
 Un trigger è una procedura speciale che viene eseguita automaticamente quando si verifica un evento nel server di un database.
 
 I trigger sono utilizzati nella progettazione di un database per:

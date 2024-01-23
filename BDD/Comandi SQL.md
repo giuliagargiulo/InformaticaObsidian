@@ -5,44 +5,7 @@ tags:
   - definizione
   - comandi
 ---
-#### Proiezione in SQL
-```SQL
-SELECT Nome,Cognome
-	FROM Studente
-```
-- Stesso numero di righe, cambia il numero di attributi.
----
-#### Selezione in SQL
-```SQL
-SELECT*
-	FROM Studente
-	WHERE (Voto > 27 and Cognome ='Rossi')
-```
-- Se la condizione è TRUE la riga viene selezionata;
-- Cambia il numero di righe, stesso numero di attributi.
 
-Condizioni di selezione:
-- `<attributo> <op_confronto> <valore>`
-- `<attributo> <op_relazione> <attributo>`
-- `<attributo> IS [NOT] NULL`
-
-`<op_confronto> = <, <=, >, >=, < >`
-`<op_relazione> = and, not, or`
-
----
-#### Proiezione e Selezione
-```SQL
-SELECT [DISTINCT] <listaAttributi>
-	FROM <nomeTabella> [AS alias]
-	WHERE <espressioneBooleana>
-```
-$1)$ Viene eseguita prima l'operazione di ***selezione*** delle righe, tramite la ***WHERE***.
-$2)$ Dopo viene eseguita l'operazione di ***proiezione***, cioè la selezione delle colonne, tramite la ***SELECT***.
-
->[!Note]
->Per eliminare i duplicati in SQL devo specificare DISTINCT.
-
----
 #### Unione, intersezione e differenza
 Gli operatori binari `UNION, EXCEPT, INTERSECT` lavorano sul risultato di due `SELECT`.
 
