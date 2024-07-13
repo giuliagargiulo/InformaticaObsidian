@@ -355,7 +355,7 @@ Il cursore è un oggetto dichiarato nella parte di `DECLARE` delle variabili, tr
 ###### Dichiarazioni, Open, Close
 - La dichiarazione NON esegue la `SELECT`.
 - La `OPEN <nomeCursore>` esegue l'interrogazione, aggiorna il buffer con il risultato e aggiorna la posizione del cursore a prima della prima riga.
-- La `CLOSE` rilascia il buffer e mi permette di riutilizzare il cursore.
+- La `CLOSE` rilascia il buffer e permette di riutilizzare il cursore.
 
 >[!example]-
 > Oracle:

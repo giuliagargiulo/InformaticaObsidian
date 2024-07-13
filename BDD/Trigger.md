@@ -23,22 +23,39 @@ I trigger sono utilizzati nella progettazione di un database per:
 ---
 ### Sintassi
 
+#### Sintassi per Oracle:
 ```SQL
-CREATE TRIGGER <nomeTrigger>
-[BEFORE/AFTER/INSTEAD OF] 
-<operazione> -- si applica solo alle view
-[FOR EACH ROW]
-WHEN <condizione>
-BEGIN
-	<azione> -- per Oracle PL/SQL, mentre per Postgres ci sarà chiamata a funzione.
-END
+CREATE TRIGGER nome_trigger
+	BEFORE/AFTER/INSTEAD OF
+	INSERT/UPDATE/DELETE ON nome_tabella
+	[FOR EACH ROW]
+	WHEN <condizione>
+	BEGIN
+		<azione> 
+	END
 
+--Per UPDATE posso specificare i singoli attributi
+UPDATE ON <tabella> [OF <attributo>[...]] 
+```
 
-<operazione = {
-INSERT ON <tabella> or
-DELETE ON <tabella> or
-UPDATE ON <tabella> [OF <attributo>[...]] -- posso specificare i singoli attributi
-}
+#### Sintassi per PostgreSQL:
+```SQL
+CREATE OR REPLACE FUNCTION nome_funzione()
+RETURNS TRIGGER AS
+$$NE
+	BEGIN
+	-- corpo della funzione
+	RETURN [NEW];
+	END;
+$$
+LANGUAGE plpgsql;
+
+CREATE TRIGGER nome_trigger
+	BEFORE/AFTER/INSTEAD OF 
+	INSERT/UPDATE/DELETE ON nome_tabella
+	[FOR EACH ROW/STATEMENT]
+	[WHEN <condizione>]
+	EXECUTE FUNCTION nome_funzione();
 ```
 
 #### Old e New
